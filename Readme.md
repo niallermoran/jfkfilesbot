@@ -1,7 +1,7 @@
 ﻿# jfkfilesbot
 A BOT built for the Dublin MTC using the Azure BOT framework that demonstrates cognitive services and accompanies the JFK Files demo
 
-#Setup
+# Setup
 
 ## Create a LUIS Application
 
