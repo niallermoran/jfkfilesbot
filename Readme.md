@@ -13,7 +13,7 @@ A BOT built for the Dublin MTC using the Azure BOT framework that demonstrates c
 
 ## Prepare the BOT Application
 
-1. Open the Visual Studio solution file jfkfilesbot.sln.
+1. Download the reporsitory locally and open the Visual Studio solution file jfkfilesbot.sln.
 2. Create a new file called web.secret.config in the same folder as web.config
 3. Create a new file called IntentDialog.secrets.cs in the same folder as IntentDialog.cs
 4. Add the following code to web.secrets.config replacing the settings as described
