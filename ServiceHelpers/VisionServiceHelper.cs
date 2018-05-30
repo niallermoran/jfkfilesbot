@@ -54,7 +54,7 @@ namespace jfkfiles.bot
 
         public static Action Throttled;
 
-        private static string apiKey = "1a850ad6294048d28e9e8196a28a92f1";
+        private static string apiKey = System.Configuration.ConfigurationManager.AppSettings["VisionAPIKey"];
         public static string ApiKey
         {
             get
@@ -73,7 +73,7 @@ namespace jfkfiles.bot
             }
         }
 
-        private static string apiKeyRegion = "northeurope";
+        private static string apiKeyRegion = System.Configuration.ConfigurationManager.AppSettings["VisionAPIRegion"];
         public static string ApiKeyRegion
         {
             get { return apiKeyRegion ; }

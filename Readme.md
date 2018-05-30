@@ -5,7 +5,7 @@ A BOT built for the Dublin MTC using the Azure BOT framework that demonstrates c
 
 ## Create a LUIS Application
 
-1. Go to luis.ai and click "import new app" from your dashboard. Importa the file FK Files BOT.json
+1. Go to luis.ai and click "import new app" from your dashboard. Import the file 'JFK Files BOT.json'
 2. Click the Train button on the top right hand corner.
 3. Go to the publish tab and publish the app.
 4. From the publish screen copy the key string, this is the subscription_key needed later
@@ -27,6 +27,8 @@ A BOT built for the Dublin MTC using the Azure BOT framework that demonstrates c
     <add key="MicrosoftAppPassword" value="[in Azure settings for the BOT resource beside the App ID, from last setting, click the manage link and generate a new password]"/>
     <add key="AzureWebJobsStorage" value="[for the storage account in Azure created with the BOT enter the connection string from the access keys section]"/>
     <add key="AzureWebJobsDashboard" value="[same as above]"/>
+	<add key="VisionAPIKey" value="[create a vision API service in Azure and grab the key]"/>
+    <add key="VisionAPIRegion" value="[the region associated with your Vision service e.g. northeurope]"/>
   </appSettings>
 ```
 5. Open the file IntentDialog.secrets.cs and use the following code, replacing the IDs as appropriate
