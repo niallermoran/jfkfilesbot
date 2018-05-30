@@ -1,0 +1,172 @@
+{
+  "luis_schema_version": "3.0.0",
+  "versionId": "0.1",
+  "name": "JFK Files BOT",
+  "desc": "This is an employee engagement BOT that demonstrates how a chat bot can provide a conversational search capability for employees researching topics.",
+  "culture": "en-us",
+  "intents": [
+    {
+      "name": "Confidence"
+    },
+    {
+      "name": "Gratitude"
+    },
+    {
+      "name": "Greeting"
+    },
+    {
+      "name": "None"
+    },
+    {
+      "name": "Search"
+    }
+  ],
+  "entities": [
+    {
+      "name": "ArticleTopic",
+      "roles": []
+    }
+  ],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [
+    {
+      "pattern": "find information on {ArticleTopic}",
+      "intent": "Search"
+    }
+  ],
+  "utterances": [
+    {
+      "text": "appreciate that",
+      "intent": "Gratitude",
+      "entities": []
+    },
+    {
+      "text": "are you confident?",
+      "intent": "Confidence",
+      "entities": []
+    },
+    {
+      "text": "confidence",
+      "intent": "Confidence",
+      "entities": []
+    },
+    {
+      "text": "confident?",
+      "intent": "Confidence",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "Greeting",
+      "entities": []
+    },
+    {
+      "text": "how confident are you",
+      "intent": "Confidence",
+      "entities": []
+    },
+    {
+      "text": "how confident are you?",
+      "intent": "Confidence",
+      "entities": []
+    },
+    {
+      "text": "id like to know more about oswald",
+      "intent": "Search",
+      "entities": [
+        {
+          "entity": "ArticleTopic",
+          "startPos": 27,
+          "endPos": 32
+        }
+      ]
+    },
+    {
+      "text": "microsoft",
+      "intent": "Search",
+      "entities": [
+        {
+          "entity": "ArticleTopic",
+          "startPos": 0,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "read more about pyramids",
+      "intent": "Search",
+      "entities": [
+        {
+          "entity": "ArticleTopic",
+          "startPos": 16,
+          "endPos": 23
+        }
+      ]
+    },
+    {
+      "text": "thank you",
+      "intent": "Gratitude",
+      "entities": []
+    },
+    {
+      "text": "thanks",
+      "intent": "Gratitude",
+      "entities": []
+    },
+    {
+      "text": "tom hanks",
+      "intent": "Search",
+      "entities": [
+        {
+          "entity": "ArticleTopic",
+          "startPos": 0,
+          "endPos": 8
+        }
+      ]
+    },
+    {
+      "text": "want to know more about paris",
+      "intent": "Search",
+      "entities": [
+        {
+          "entity": "ArticleTopic",
+          "startPos": 24,
+          "endPos": 28
+        }
+      ]
+    },
+    {
+      "text": "what is eiffel tower",
+      "intent": "Search",
+      "entities": [
+        {
+          "entity": "ArticleTopic",
+          "startPos": 8,
+          "endPos": 19
+        }
+      ]
+    },
+    {
+      "text": "who is barack obama",
+      "intent": "Search",
+      "entities": [
+        {
+          "entity": "ArticleTopic",
+          "startPos": 7,
+          "endPos": 18
+        }
+      ]
+    }
+  ]
+}

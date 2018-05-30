@@ -1,0 +1,31 @@
+{
+    "name": "JFK Files",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "appId": "",
+            "id": "7270c1d0-5f1e-11e8-a00d-ebdab64fd4c8",
+            "type": "endpoint",
+            "appPassword": "",
+            "endpoint": "http://localhost:3984/api/messages",
+            "name": "http://localhost:3984/api/messages"
+        },
+        {
+            "appId": "",
+            "id": "ffa51e00-5f25-11e8-9c32-87301b811ce2",
+            "type": "endpoint",
+            "appPassword": "",
+            "endpoint": "http://jfkfilesbot.azurewebsites.net/api/messages",
+            "name": "JFK Files"
+        },
+        {
+            "type": "abs",
+            "name": "jfkfilesbot",
+            "id": "b89be918-df79-4293-a12a-65342c9212d9",
+            "tenantId": "microsoft.com",
+            "subscriptionId": "94b3e42f-ba9b-4597-963b-d2fea15e9ba3",
+            "resourceGroup": "jfkfilesbot"
+        }
+    ]
+}

@@ -1,0 +1,21 @@
+﻿@using BOTWebsite.Models
+@model LoginViewModel
+@{
+    ViewBag.Title = "Welcome to the JFK Files Employee Chatbot";
+}
+
+<h2>@ViewBag.Title.</h2>
+<div class="row">
+    <div class="col-md-2">
+        
+    </div>
+    <div class="col-md-8" style="height:600px">
+        <section id="socialLoginForm">
+            @Html.Partial("_ExternalLoginsListPartial", new ExternalLoginListViewModel { ReturnUrl = ViewBag.ReturnUrl })
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

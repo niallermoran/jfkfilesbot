@@ -1,0 +1,15 @@
+{
+    "name": "JFK Live",
+    "description": "",
+    "secretKey": "",
+    "services": [
+        {
+            "appId": "",
+            "id": "150f4b80-5f26-11e8-9dbe-9d21f83e82cd",
+            "type": "endpoint",
+            "appPassword": "",
+            "endpoint": "http://jfkfilesbot.azurewebsites.net/api/messages",
+            "name": "http://jfkfilesbot.azurewebsites.net/api/messages"
+        }
+    ]
+}

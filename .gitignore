@@ -1,0 +1,11 @@
+obj/
+bin/
+packages/
+*.pubxml.user
+*.csproj.user
+.vs/
+Web.secret.config
+/Web.secret.Debug.config
+/Web.secret.Release.config
+/Dialogs/ResearchDialog.secrets.cs
+/Dialogs/IntentDialog.secrets.cs
