@@ -26,6 +26,7 @@
         {
             try
             {
+                await context.PostAsync($"Analysing the image, please wait ...");
 
                 // get the attchment
                 var message = await result;

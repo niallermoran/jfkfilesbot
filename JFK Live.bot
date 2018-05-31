@@ -1,7 +1,7 @@
 {
     "name": "JFK Live",
     "description": "",
-    "secretKey": "",
+    "secretKey": "f58cf012bf6a7bbb6ebd9939b4c02ec1d8e7422a24c849d00dc9b001f0a731b3aaeba153b502eeeeb48eaf48b786163b",
     "services": [
         {
             "appId": "",
