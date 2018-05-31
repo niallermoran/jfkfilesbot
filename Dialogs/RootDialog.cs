@@ -31,7 +31,7 @@
             if (message.Attachments != null && message.Attachments.Count > 0)
             {
                 // check if an image has been uploaded
-                await context.Forward(new ReceiveAttachmentDialog(), ResumeAttachmentAfterDialog, message, System.Threading.CancellationToken.None);
+                await context.Forward(new AnalyseAttachmentDialog(), ResumeAttachmentAfterDialog, message, System.Threading.CancellationToken.None);
             }
             else if (!string.IsNullOrEmpty(message.Text))
             {

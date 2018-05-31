@@ -214,7 +214,7 @@
     <Compile Include="Dialogs\ResearchDialog.cs" />
     <Compile Include="Dialogs\IntentDialog.secrets.cs" />
     <Compile Include="Dialogs\IntentDialog.cs" />
-    <Compile Include="Dialogs\ReceiveAttachmentDialog.cs" />
+    <Compile Include="Dialogs\AnalyseAttachmentDialog.cs" />
     <Compile Include="Dialogs\RootDialog.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>

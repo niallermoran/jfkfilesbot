@@ -13,7 +13,7 @@
     using Newtonsoft.Json.Linq;
 
     [Serializable]
-    internal class ReceiveAttachmentDialog : IDialog<object>
+    internal class AnalyseAttachmentDialog : IDialog<object>
     {
         public async Task StartAsync(IDialogContext context)
         {
