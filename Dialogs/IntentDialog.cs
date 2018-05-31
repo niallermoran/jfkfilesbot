@@ -6,6 +6,7 @@ using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
 using System.Text;
+using System.Collections.Generic;
 
 namespace jfkfiles.bot
 {
@@ -18,7 +19,7 @@ namespace jfkfiles.bot
     internal sealed partial class IntentDialog : LuisDialog<object>
     {
         private readonly BingSearchService bingSearchService;
-
+      
         public IntentDialog()
         {
             bingSearchService = new BingSearchService();
@@ -37,18 +38,14 @@ namespace jfkfiles.bot
             builder.AppendLine("Hi");
             builder.AppendLine("---");
             builder.AppendLine("There are a number of things I can help you with, such as:");
-            builder.AppendLine("");
-            builder.AppendLine("* Find articles on specific topics by asking for information");
-            builder.AppendLine("* Upload an image and I will do my best to tell you what I see");
-            //builder.AppendLine("* I can even translate text for you");
+            foreach (string s in RootDialog.options)
+            {
+                builder.AppendLine("* " + s);
+            }
             await context.PostAsync(builder.ToString());
         }
 
-        [LuisIntent(JFKFilesBOTStrings.GratitudeIntentName)]
-        public async Task GratitudeIntentHandlerAsync(IDialogContext context, IAwaitable<IMessageActivity> activity, LuisResult result)
-        {
-            await context.PostAsync("You are very welcome!");
-        }
+
 
         [LuisIntent(JFKFilesBOTStrings.ConfidenceIntentName)]
         public async Task ConfidenceIntentHandlerAsync(IDialogContext context, IAwaitable<IMessageActivity> activity, LuisResult result)

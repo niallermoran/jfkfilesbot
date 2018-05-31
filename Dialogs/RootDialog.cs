@@ -1,5 +1,6 @@
 ﻿namespace jfkfiles.bot
 {
+    using System.Text;
     using System;
     using System.Collections.Generic;
     using System.IO;
@@ -15,13 +16,30 @@
     [Serializable]
     public class RootDialog : IDialog<object>
     {
+        public static IEnumerable<string> options = new List<string> {
+            " Find articles on specific topics",
+            " Upload an image and I will do my best to tell you what I see" };
+
         private static string ConnectionName = ConfigurationManager.AppSettings["AuthenticationConnectionName"];
 
         public async Task StartAsync(IDialogContext context)
         {
-            context.Wait(this.MessageReceivedAsync);
+            context.Wait(this.ShowWelcomeMessage);
+            
         }
 
+        public async virtual Task ShowWelcomeMessage(IDialogContext context, IAwaitable<IMessageActivity> activity )
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine("Hi there");
+            builder.AppendLine("There are a number of things I can help you with, such as:");
+            foreach (string s in RootDialog.options)
+            {
+                builder.AppendLine("*" + s);
+            }
+            await context.PostAsync(builder.ToString());
+            context.Wait(this.MessageReceivedAsync);
+        }
 
         public async virtual Task MessageReceivedAsync(IDialogContext context, IAwaitable<IMessageActivity> result)
         {
