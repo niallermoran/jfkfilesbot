@@ -17,15 +17,14 @@
     public class RootDialog : IDialog<object>
     {
         public static IEnumerable<string> options = new List<string> {
-            " Find articles on specific topics",
-            " Upload an image and I will do my best to tell you what I see" };
+            "Find articles on specific topics",
+            "Upload an image and I will do my best to tell you what I see" };
 
         private static string ConnectionName = ConfigurationManager.AppSettings["AuthenticationConnectionName"];
 
         public async Task StartAsync(IDialogContext context)
         {
-            context.Wait(this.ShowWelcomeMessage);
-            
+            context.Wait(this.ShowWelcomeMessage);            
         }
 
         public async virtual Task ShowWelcomeMessage(IDialogContext context, IAwaitable<IMessageActivity> activity )
@@ -35,7 +34,7 @@
             builder.AppendLine("There are a number of things I can help you with, such as:");
             foreach (string s in RootDialog.options)
             {
-                builder.AppendLine("*" + s);
+                builder.AppendLine("* " + s);
             }
             await context.PostAsync(builder.ToString());
             context.Wait(this.MessageReceivedAsync);

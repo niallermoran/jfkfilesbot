@@ -35,8 +35,7 @@ namespace jfkfiles.bot
         public async Task GreetingIntentHandlerAsync(IDialogContext context, IAwaitable<IMessageActivity> activity, LuisResult result)
         {
             StringBuilder builder = new StringBuilder();
-            builder.AppendLine("Hi");
-            builder.AppendLine("---");
+            builder.AppendLine("Hi there");
             builder.AppendLine("There are a number of things I can help you with, such as:");
             foreach (string s in RootDialog.options)
             {

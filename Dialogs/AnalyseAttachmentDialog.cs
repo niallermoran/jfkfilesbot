@@ -116,13 +116,10 @@
             // add a title
             card.Body.Add( new AdaptiveCards.AdaptiveTextBlock( "Facts about the image:" ));
 
-            // create two columns, tags on left and everything else on right
-            var cs = new AdaptiveCards.AdaptiveColumnSet();
-            cs.Columns.Add(new AdaptiveCards.AdaptiveColumn());
-            cs.Columns.Add(new AdaptiveCards.AdaptiveColumn());
-            cs.Columns[0].Width = "auto";
-            cs.Columns[1].Width = "auto";
-            card.Body.Add( cs );
+            // create a container for each of the sections
+            var container = new AdaptiveCards.AdaptiveContainer();
+            container.Separator = true;
+            card.Body.Add( container );
 
             #region Tags
             // create the fact set for the tags
@@ -143,7 +140,7 @@
             }
 
             // add the factset
-            cs.Columns[0].Items.Add(tags);
+            container.Items.Add(tags);
             #endregion
 
             #region Celebrities
@@ -188,9 +185,11 @@
                 }
             }
 
-            cs.Columns[1].Items.Add(celebs);
+            container.Items.Add(celebs);
 
             #endregion
+
+            
 
             // get the attchment
             Attachment att = new Attachment(contentType: AdaptiveCards.AdaptiveCard.ContentType, content: card);
